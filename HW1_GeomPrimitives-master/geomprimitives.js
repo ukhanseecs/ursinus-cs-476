@@ -16,7 +16,6 @@ vec3 = glMatrix.vec3;
  * @return {float} Angle between vectors ab and ac in degrees
  */
 function getAngle(a, b, c) {
-    // TODO: Fill this in
 	let ab = vec3.create()
 	let ac = vec3.create()
 
