@@ -148,7 +148,17 @@ class RasterImage {
         this.fillRect(100, 190, 100, 18, [255, 0, 0])
 
         //circle
-        this.fillCircle(300, 300, 50, [255,23,180])
+        this.fillCircle(485, 150, 70, [155,23,180])
+        this.fillCircle(715, 150, 70, [205,23,180])
+
+
+        this.fillCircle(600, 250, 175, [255,23,180])
+        this.fillCircle(530, 180, 20, [0,100,0])
+        this.fillCircle(670, 180, 20, [0,0,100])
+
+        this.fillCircle(600, 300, 50, [0,0,0])
+
+
 
 
 
