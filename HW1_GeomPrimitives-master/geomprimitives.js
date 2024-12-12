@@ -88,6 +88,17 @@ function projPerpVector(u, v) {
  */
 function getTriangleArea(a, b, c) {
     // TODO: Fill this in
+	let ab = vec3.create()
+	let ac = vec3.create()
+
+	vec3.subtract(ab, b, a)
+	vec3.subtract(ac, c, a)
+
+	let cross_prod = vec3.create()
+	vec3.cross(cross_prod, ab, ac)
+	let mag_cross = vec3.length(cross_prod)
+	let area = 1/2 * mag_cross
+	return area
 }
 
 
