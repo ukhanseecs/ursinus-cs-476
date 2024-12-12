@@ -5,26 +5,13 @@
  */
 
 
-// sqaure func
-function square(x) {
-    result1 = x * x; //global scope variable;
-    return result1;
+function quadratic_equ(a, b, c) {
+    underroot_term = Math.sqrt(b*b - 4*a*c)
+    divide_term =2*a
+    add_term = -b
+    x1 =(add_term + underroot_term)/(divide_term)
+    x2 =(add_term - underroot_term)/(divide_term)
+    return console.log(x1, x2)
 }
 
-function another_square(x) {
-    const result2 = x * x; //local scope variable;
-    return x * x;
-}
-
-function yet_another_square(x) {
-    const result3 = x * x; //local scope variable;
-    return x * x;
-}
-
-console.log(square(4)) //16
-console.log(another_square(5)) //25
-console.log(result1) //16
-console.log(result2) //error
-console.log(result3) //error
-
-
+quadratic_equ(1, 4, 3)
