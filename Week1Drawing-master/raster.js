@@ -93,6 +93,14 @@ class RasterImage {
      */
     fillCircle(cx, cy, r, color) {
         // TODO: Fill this in
+        for (let i=cx-r; i< cx+r; i++){
+            for (let j=cy-r; j < cy+r; j++){
+                let value = ((i-cx)*(i-cx)) + ((j-cy)*(j-cy))
+                if (value < (r*r)){
+                    this.drawPixel(i, j, color)
+                }
+            }
+        }
     }
 
     /**
@@ -138,6 +146,9 @@ class RasterImage {
         this.fillRect(85, 85, 50, 50, [0, 0, 255])
         this.fillRect(165, 85, 50, 50, [0, 0, 255])
         this.fillRect(100, 190, 100, 18, [255, 0, 0])
+
+        //circle
+        this.fillCircle(300, 300, 50, [255,23,180])
 
 
 
