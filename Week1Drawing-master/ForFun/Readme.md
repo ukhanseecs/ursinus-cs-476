@@ -1,0 +1,1 @@
+This was an exercise that we did in quarantine during fall 2020.  It is a particle simulation that demonstrates the "flattening the curve" phenomenon based on different parameters.  If it's working properly, it will plot a graph at the end
