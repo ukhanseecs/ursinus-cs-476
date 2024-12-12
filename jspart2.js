@@ -12,5 +12,17 @@ function mean_of_arr(array){
     return {sum_of_array, mean_of_array}
 }
 
-const arr = [3,4,5,6]
-console.log(mean_of_arr(arr))
+
+
+function reverse_the_array(array){
+    let reversed_array = []
+    for (let i=(array.length-1); i >= 0; i--) {
+        reversed_array.push(array[i])
+    }
+    return reversed_array
+
+}
+
+const arr = [4,5,6,6,6,8]
+console.log(arr)
+console.log(reverse_the_array(arr))
