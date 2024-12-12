@@ -44,7 +44,14 @@ function getAngle(a, b, c) {
  */
 function projVector(u, v) {
     // TODO: Fill this
-
+	let uv= vec3.dot(u, v)
+	let vv= vec3.dot(v, v)
+	let proj = vec3.create()
+	vec3.scale(proj,v, (uv/vv))
+	if  (vec3.length(v)==0){
+		return vec3.fromValues(0,0,0)
+	}
+	return proj
 }
 
 
@@ -57,6 +64,16 @@ function projVector(u, v) {
  */
 function projPerpVector(u, v) {
     // TODO: Fill this in
+	let uv= vec3.dot(u, v)
+	let vv= vec3.dot(v, v)
+	let proj = vec3.create()
+	let perp = vec3.create()
+ 	vec3.scale(proj,v, (uv/vv))
+	if  (vec3.length(v)==0){
+		return vec3.fromValues(0,0,0)
+	}
+	perp =vec3.subtract(perp, u, proj)
+	return perp
 }
 
 
