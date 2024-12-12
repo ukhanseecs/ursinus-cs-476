@@ -115,6 +115,41 @@ function getTriangleArea(a, b, c) {
  */
 function getAboveOrBelow(a, b, c, d) {
     // TODO: Fill this in
+	let ab = vec3.create()
+	let ac = vec3.create()
+	let ad = vec3.create()
+
+
+	vec3.subtract(ab, b, a)
+	vec3.subtract(ac, c, a)
+	vec3.subtract(ad, d, a)
+
+	let n = vec3.create()
+	vec3.cross(n, ab, ac)
+
+	let dot_ab_ac =vec3.dot(ab, ac)
+	let mag_ab = vec3.length(ab)
+	let mag_ac = vec3.length(ac)
+
+	if ((dot_ab_ac)/(mag_ab*mag_ac) == 1){
+		return -2
+	}
+
+
+	let dot_nd=vec3.dot(n, ad)
+
+	if (dot_nd > 0){
+		return 1
+	}
+	else if (dot_nd < 0){
+		return -1
+	}
+	else if (dot_nd = 0){
+		return 0
+	}
+	else if (dot_nd > 0){
+		return 1
+	}
 }
 
 
