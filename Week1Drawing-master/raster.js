@@ -62,6 +62,11 @@ class RasterImage {
      */
     fillRect(x, y, w, h, color) {
         // TODO: Fill this in
+        for (let i = x; i < x + w; i++) {
+            for (let j = y; j < y + h; j++) {
+                this.drawPixel(i, j, color);
+            }
+        }
     }
 
 
@@ -73,6 +78,7 @@ class RasterImage {
      */
     drawLine(a, b) {
         // TODO: Fill this in
+
     }
 
 
@@ -126,6 +132,13 @@ class RasterImage {
         this.ctx.clearRect(0, 0, W, H);
 
         // TODO: Draw some stuff here
+
+        //rect
+        this.fillRect(50, 50, 200, 200, [255, 255, 0])
+        this.fillRect(85, 85, 50, 50, [0, 0, 255])
+        this.fillRect(165, 85, 50, 50, [0, 0, 255])
+        this.fillRect(100, 190, 100, 18, [255, 0, 0])
+
 
 
         let toc = (new Date()).getTime();
