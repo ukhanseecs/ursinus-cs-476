@@ -183,7 +183,58 @@ function getAboveOrBelow(a, b, c, d) {
  */
 function getBarycentricCoords(a, b, c, p) {
 	// TODO: Fill this in
-	return vec3.create();  //This is a dummy value!  Replace with your answer
+	function getTriangleArea(a, b, c) {
+		// TODO: Fill this in
+		let ab = vec3.create()
+		let ac = vec3.create()
+
+		vec3.subtract(ab, b, a)
+		vec3.subtract(ac, c, a)
+
+		let cross_prod = vec3.create()
+		vec3.cross(cross_prod, ab, ac)
+		let mag_cross = vec3.length(cross_prod)
+		let area = 1/2 * mag_cross
+		return area
+	}
+
+
+	function check_vector_equal (a, b, epsilon = 1e-6) {
+		return (
+			Math.abs(a[0]-b[0]) < epsilon &&
+			Math.abs(a[1]-b[1]) < epsilon &&
+			Math.abs(a[2]-b[2]) < epsilon
+		)
+	}
+
+
+	let tri_area = getTriangleArea(a,b,c)
+
+	if (tri_area == 0){
+		if (check_vector_equal(p,a)) {
+			return vec3.fromValues(1,0,0)
+		}
+		else {
+			return vec3.fromValues(0,0,0)
+		}
+	}
+	else {
+		let alpha = getTriangleArea(b,c,p)/tri_area
+		let beta = getTriangleArea(a,c,p)/tri_area
+		let gamma = getTriangleArea(a,b,p)/tri_area
+
+		let e = 0.0005
+
+		// let bary_coords = vec3.fromValues(alpha, beta, gamma);
+
+		if ((alpha+beta+gamma) <= (1+e) && (alpha+beta+gamma) >= (1-e) ){
+			return vec3.fromValues(alpha, beta, gamma)
+		}
+		else {
+			return vec3.fromValues(0,0,0)
+		}
+	}
+
 }
 
 
