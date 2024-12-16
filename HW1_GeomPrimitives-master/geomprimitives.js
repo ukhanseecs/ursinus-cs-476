@@ -333,5 +333,47 @@ function rayIntersectTriangle(p0, v, a, b, c) {
  */
 function rayIntersectSphere(p0, v, c, r) {
 	// TODO: Fill this in
-	return []; //This is a dummy value!  Replace with your answer
+	let a = vec3.dot(v, v)
+	let w = vec3.create()
+	vec3.subtract(w, p0, c)
+	let b = 2*vec3.dot(w, v)
+	d = vec3.dot(w,w) - r*r
+
+	let det =b*b -4*a*d
+	if (det <0) {
+		return []
+	}
+	else if (det >= 0){
+
+		let t1 = (-b + Math.sqrt(det))/(2*a)
+		let t2 = (-b - Math.sqrt(det))/(2*a)
+
+		let p1 = vec3.create()
+		let p2 = vec3.create()
+
+		vec3.scaleAndAdd(p1, p0, v, t1)
+		vec3.scaleAndAdd(p2, p0, v, t2)
+
+		if (t1 >= 0 && t2 >= 0) {
+			if (t1 < t2){
+				return [p1, p2]
+			}
+			else if(t1 > t2){
+				return [p2, p1]
+			}
+			else if (t1 == t2) {
+				return[p1]
+			}
+		}
+		else if (t1 < 0 && t2 <0){
+			return []
+		}
+		else if (t1 >= 0 && t2 <= 0) {
+			return [p1]
+		}
+		else if (t2 >= 0 && t1 <= 0) {
+			return [p2]
+		}
+	}
+
 }
