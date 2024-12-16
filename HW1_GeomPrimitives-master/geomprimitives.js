@@ -256,8 +256,65 @@ function getBarycentricCoords(a, b, c, p) {
  */
 function rayIntersectTriangle(p0, v, a, b, c) {
 	// TODO: Fill this in
-	return []; //This is a dummy value!  Replace with your answer
+	let ab = vec3.create()
+	let ac = vec3.create()
+	vec3.subtract(ab, b, a)
+	vec3.subtract(ac, c, a)
+	// normal vector to the triangle plane
+	let n = vec3.create()
+	vec3.cross(n, ab, ac)
+
+
+	//intermediate step, find a-p0
+	let a_minus_p0 = vec3.create()
+	vec3.subtract(a_minus_p0, a, p0)
+	if (vec3.dot(v, n)==0) {
+		return []
+	}
+
+
+	// find t
+	let	t = vec3.dot(a_minus_p0, n)/vec3.dot(v, n)
+	if (t<0){
+		return []
+	}
+
+	// find intersection point p as p0 + tv
+	let p = vec3.create()
+	vec3.scaleAndAdd(p, p0, v, t)
+
+
+	// finding alpha beta gamma
+	function getTriangleArea(a, b, c) {
+		// TODO: Fill this in
+		let ab = vec3.create()
+		let ac = vec3.create()
+
+		vec3.subtract(ab, b, a)
+		vec3.subtract(ac, c, a)
+
+		let cross_prod = vec3.create()
+		vec3.cross(cross_prod, ab, ac)
+		let mag_cross = vec3.length(cross_prod)
+		let area = 1/2 * mag_cross
+		return area
+	}
+
+	let tri_area = getTriangleArea(a,b,c)
+	let alpha = getTriangleArea(b,c,p)/tri_area
+	let beta = getTriangleArea(a,c,p)/tri_area
+	let gamma = getTriangleArea(a,b,p)/tri_area
+	let e = 1e-6
+
+
+	// if alpha beta gamma add to 1
+	if ((alpha+beta+gamma) <= (1+e) && (alpha+beta+gamma) >= (1-e)){
+		return [p];
+	} //if they dont
+	else return []
 }
+
+
 
 
 /**
