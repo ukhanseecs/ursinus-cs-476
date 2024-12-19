@@ -84,7 +84,14 @@
 
 
     // Load the sample scene as a default
-    $.get("../scenes/sample-scene.json", function(scene) {
+    //$.get("../scenes/sample-scene.json", function(scene) {
+    //    canvas.setupScene(scene, glcanvas.clientWidth, glcanvas.clientHeight);
+      //  canvas.drawEdges = false;
+        //canvas.updateMeshDrawings();
+       // requestAnimFrame(canvas.repaint.bind(canvas));
+    //});
+    // Load the sample scene as a default
+    $.get("../scenes/boxes.json", function(scene) {
         canvas.setupScene(scene, glcanvas.clientWidth, glcanvas.clientHeight);
         canvas.drawEdges = false;
         canvas.updateMeshDrawings();

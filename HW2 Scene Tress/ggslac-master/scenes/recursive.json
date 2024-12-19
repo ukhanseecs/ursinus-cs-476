@@ -1,0 +1,40 @@
+{
+    "name": "recursive_scene",
+    "lights":[
+        {
+            "pos":[0, 200, 0],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[-5, 2, -10],
+            "color":[1, 1, 1]
+        },
+        {
+            "pos":[5,2,10],
+            "color":[1,1,1]
+        }
+    ],
+    "camera":[
+        {
+        "pos": [0.00, 12.50, -2.00],
+        "rot": [0.00, 0.00, 0.0, 0.00],
+        "fovy": 1.0
+        }
+    ],
+    "children": [
+        {
+            "type": "file",
+            "filename": "../scenes/sample-scene.json"
+        },
+        {
+            "transform": [
+                1, 0, 0, 0,
+                0, 1, 0, 20,
+                0, 0, 1, 0,
+                0, 0, 0, 1
+            ],
+            "type": "file",
+            "filename": "../scenes/sample-scene.json"
+        }
+    ]
+}
