@@ -39,8 +39,8 @@
     ],
     "cameras": [
         {"pos": [0.00, 30.50, -2.00],
-            "rot": [0.66, 0.00, 0.0, 0.72],
-            "fovy": 1.0},
+        "rot": [0.66, 0.00, 0.0, 0.72],
+        "fovy": 1.0},
         {},
         {}
     ],
@@ -100,10 +100,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -126,10 +148,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -152,10 +196,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -178,10 +244,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -204,10 +292,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -230,10 +340,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -256,10 +388,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -282,10 +436,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -308,10 +484,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -334,10 +532,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -360,10 +580,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -386,10 +628,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -412,10 +676,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -438,10 +724,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -464,10 +772,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -490,10 +820,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -516,10 +868,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -542,10 +916,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -568,10 +964,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         },
@@ -594,10 +1012,32 @@
                 0,
                 1
             ],
-            "shapes": [
+            "children": [
                 {
-                    "type": "mesh",
-                    "filename": "../meshes/dinopet.off"
+                    "transform": [
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "shapes": [
+                        {
+                            "type": "mesh",
+                            "filename": "../meshes/dinopet.off"
+                        }
+                    ]
                 }
             ]
         }

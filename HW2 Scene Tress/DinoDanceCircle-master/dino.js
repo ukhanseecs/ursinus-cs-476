@@ -75,10 +75,17 @@ function makeDinoScene() {
         const z = radius * Math.sin(theta);
 
         let dino = {
+            "transform": [
+                1, 0, 0, x,
+                0, 0, 1, 0,
+                0, -1, 0, z,
+                0, 0, 0, 1
+            ],
+            "children": [{
                 "transform": [
-                    1, 0, 0, x,
+                    1, 0, 0, 0,
+                    0, 1, 0, 0,
                     0, 0, 1, 0,
-                    0, -1, 0, z,
                     0, 0, 0, 1
                 ],
                 "shapes": [
@@ -87,9 +94,10 @@ function makeDinoScene() {
                         "filename": "../meshes/dinopet.off"
                     }
                 ]
-            };
-            scene.children.push(dino);
-        }
+                    }]
+                };
+                scene.children.push(dino);
+            }
 
 
     // TODO: Fill this in.  Add at least 20 dinos to the scene in a loop
