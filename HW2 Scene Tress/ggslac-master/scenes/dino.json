@@ -1,0 +1,88 @@
+{
+    "lights": [
+        {
+            "pos": [
+                0,
+                200,
+                0
+            ],
+            "color": [
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "pos": [
+                -5,
+                2,
+                -10
+            ],
+            "color": [
+                1,
+                1,
+                1
+            ]
+        },
+        {
+            "pos": [
+                5,
+                2,
+                10
+            ],
+            "color": [
+                1,
+                1,
+                1
+            ]
+        }
+    ],
+    "cameras": [
+        {
+        "pos": [-10.00, 2.00, 20.00],
+        "rot": [0,0.2,0,1],
+        "fovy": 1.0
+        },
+        {},
+        {}
+    ],
+    "name": "dinos",
+    "materials": {
+        "red": {
+            "kd": [
+                1,
+                0,
+                0.2
+            ]
+        }
+    },
+    "children": [
+        {
+            "transform":[1, 0, 0, 0,
+                        0, 0, 1, 0,
+                        0, -1, 0, 0,
+                        0, 0, 0, 1],
+            "shapes": [
+                {
+                    "type": "mesh",
+                    "filename": "../meshes/dinopet.off"
+                }
+            ],
+            "children": [
+                {
+                "transform":[1, 0, 0, 10,
+                            0, 1, 0, 0,
+                            0, 0, 1, 0,
+                            0, 0, 0, 1],
+                "shapes": [
+                    {
+                        "type": "mesh",
+                        "filename": "../meshes/dinopet.off"
+                    }
+                    ]
+                }
+            ]
+
+        }
+    ]
+}
