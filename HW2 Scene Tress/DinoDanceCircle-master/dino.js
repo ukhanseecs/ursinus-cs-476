@@ -21,7 +21,7 @@ function getMat4Array(M) {
     }
     return ret;
 }
-    
+
 
 function makeDinoScene() {
     let scene = JSON.parse(`{
@@ -65,10 +65,37 @@ function makeDinoScene() {
             }
         ]
     }`);
-    
+
+    const radius = 15
+    const numDinos = 20
+
+    for (let i = 0; i < numDinos; i++) {
+        const theta = (2 * Math.PI * i) / numDinos;
+        const x = radius * Math.cos(theta);
+        const z = radius * Math.sin(theta);
+
+        let dino = {
+                "transform": [
+                    1, 0, 0, x,
+                    0, 0, 1, 0,
+                    0, -1, 0, z,
+                    0, 0, 0, 1
+                ],
+                "shapes": [
+                    {
+                        "type": "mesh",
+                        "filename": "../meshes/dinopet.off"
+                    }
+                ]
+            };
+            scene.children.push(dino);
+        }
+
+
     // TODO: Fill this in.  Add at least 20 dinos to the scene in a loop
 
     let s = JSON.stringify(scene, null, 4);
     document.getElementById("dinoCode").innerHTML = s;
     //download(s, "dinos.json", "text/javascript");
+
 }
