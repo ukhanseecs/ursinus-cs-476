@@ -79,7 +79,7 @@ function makeDinoScene() {
     }`);
 
     const radius = 10
-    const numDinos = 20
+    const numDinos = 4
 
     for (let i = 0; i < numDinos; i++) {
         const theta = (2 * Math.PI * i) / numDinos;
@@ -87,14 +87,19 @@ function makeDinoScene() {
         const x = radius * Math.cos(theta);
         const z = radius * Math.sin(theta);
 
+        const xz_rot_mat = mat4.create()
+        mat4.fromXRotation(xz_rot_mat, 3*Math.PI/2)
+
         const xz_tra_mat = mat4.create()
         mat4.fromTranslation(xz_tra_mat, vec3.fromValues(x, 0, z))
 
         const rotationMat = mat4.create();
-        mat4.fromYRotation(rotationMat, theta+ Math.PI / numDinos);
+        mat4.fromZRotation(rotationMat, Math.PI/2);
 
         const mat1 = mat4.create();
-        mat4.mul(mat1, xz_tra_mat, rotationMat);
+        mat4.mul(mat1, xz_tra_mat, xz_rot_mat);
+        mat4.mul(mat1, mat1, rotationMat);
+
 
 
         let dino = {
@@ -111,29 +116,6 @@ function makeDinoScene() {
         scene.children.push(dino);
     }
 
-    // for (let i = 0; i < numDinos; i++) {
-    //     const theta = (2 * Math.PI * i) / numDinos;
-    //     const x = radius * Math.cos(theta);
-    //     const z = radius * Math.sin(theta);
-
-    //     let dino = {
-    //         "transform": [
-    //             1, 0, 0, x,
-    //             0, 0, 1, 0,
-    //             0, -1, 0, z,
-    //             0, 0, 0, 1
-    //         ],
-    //         "shapes": [
-    //             {
-    //                 "type": "mesh",
-    //                 "filename": "../meshes/dinopet.off"
-    //             }
-    //         ]
-    //     };
-    //     scene.children.push(dino);
-    // }
-
-    // TODO: Fill this in.  Add at least 20 dinos to the scene in a loop
 
     let s = JSON.stringify(scene, null, 4);
     document.getElementById("dinoCode").innerHTML = s;
