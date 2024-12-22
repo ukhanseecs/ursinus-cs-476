@@ -45,7 +45,7 @@ function makeDinoScene() {
 
         "cameras":[
         {
-        "pos": [2,30.5,-2],
+        "pos": [2,40.5,-2],
         "rot": [0.74,-0.00,-0.00,0.67],
         "fovy": 1.0
         },
@@ -78,8 +78,8 @@ function makeDinoScene() {
         ]
     }`);
 
-    const radius = 10
-    const numDinos = 4
+    const radius = 18
+    const numDinos = 20
 
     for (let i = 0; i < numDinos; i++) {
         const theta = (2 * Math.PI * i) / numDinos;
@@ -94,7 +94,7 @@ function makeDinoScene() {
         mat4.fromTranslation(xz_tra_mat, vec3.fromValues(x, 0, z))
 
         const rotationMat = mat4.create();
-        mat4.fromZRotation(rotationMat, Math.PI/2);
+        mat4.fromZRotation(rotationMat, (2*Math.PI)- (theta + Math.PI/numDinos));
 
         const mat1 = mat4.create();
         mat4.mul(mat1, xz_tra_mat, xz_rot_mat);
