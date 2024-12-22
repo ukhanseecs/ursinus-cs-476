@@ -41,7 +41,16 @@ function makeDinoScene() {
         ],
 
         "cameras":[
-            {}, {}, {}
+        {
+        "pos": [2,30.5,-2],
+        "rot": [0.74,-0.00,-0.00,0.67],
+        "fovy": 1.0
+        },
+        {
+        "pos": [0.00, 30.50, -2.00],
+        "rot": [0.66, 0.00, 0.0, 0.72],
+        "fovy": 1.0
+        }, {}
         ],
 
         "name":"dinos",
@@ -66,8 +75,9 @@ function makeDinoScene() {
         ]
     }`);
 
-    const radius = 15
+    const radius = 10
     const numDinos = 20
+    const angle = (360/numDinos)*PI/180
 
     for (let i = 0; i < numDinos; i++) {
         const theta = (2 * Math.PI * i) / numDinos;
@@ -83,9 +93,9 @@ function makeDinoScene() {
             ],
             "children": [{
                 "transform": [
-                    1, 0, 0, 0,
+                    0.707, 0, 0.707, 0,
                     0, 1, 0, 0,
-                    0, 0, 1, 0,
+                    -0.707, 0, 0.707, 0,
                     0, 0, 0, 1
                 ],
                 "shapes": [
