@@ -6,6 +6,9 @@ function download(content, fileName, contentType) {
     a.click();
 }
 
+vec3 = glMatrix.vec3;
+mat4 = glMatrix.mat4;
+
 /**
  * Extracts the elements of a mat4 object into an array
  * in row-major order
@@ -77,38 +80,58 @@ function makeDinoScene() {
 
     const radius = 10
     const numDinos = 20
-    const angle = (360/numDinos)*PI/180
 
     for (let i = 0; i < numDinos; i++) {
         const theta = (2 * Math.PI * i) / numDinos;
+
         const x = radius * Math.cos(theta);
         const z = radius * Math.sin(theta);
 
-        let dino = {
-            "transform": [
-                1, 0, 0, x,
-                0, 0, 1, 0,
-                0, -1, 0, z,
-                0, 0, 0, 1
-            ],
-            "children": [{
-                "transform": [
-                    0.707, 0, 0.707, 0,
-                    0, 1, 0, 0,
-                    -0.707, 0, 0.707, 0,
-                    0, 0, 0, 1
-                ],
-                "shapes": [
-                    {
-                        "type": "mesh",
-                        "filename": "../meshes/dinopet.off"
-                    }
-                ]
-                    }]
-                };
-                scene.children.push(dino);
-            }
+        const xz_tra_mat = mat4.create()
+        mat4.fromTranslation(xz_tra_mat, vec3.fromValues(x, 0, z))
 
+        const rotationMat = mat4.create();
+        mat4.fromYRotation(rotationMat, theta+ Math.PI / numDinos);
+
+        const mat1 = mat4.create();
+        mat4.mul(mat1, xz_tra_mat, rotationMat);
+
+
+        let dino = {
+            "transform":
+                getMat4Array(mat1)
+            ,
+            "shapes": [
+                {
+                    "type": "mesh",
+                    "filename": "../meshes/dinopet.off"
+                }
+            ]
+         };
+        scene.children.push(dino);
+    }
+
+    // for (let i = 0; i < numDinos; i++) {
+    //     const theta = (2 * Math.PI * i) / numDinos;
+    //     const x = radius * Math.cos(theta);
+    //     const z = radius * Math.sin(theta);
+
+    //     let dino = {
+    //         "transform": [
+    //             1, 0, 0, x,
+    //             0, 0, 1, 0,
+    //             0, -1, 0, z,
+    //             0, 0, 0, 1
+    //         ],
+    //         "shapes": [
+    //             {
+    //                 "type": "mesh",
+    //                 "filename": "../meshes/dinopet.off"
+    //             }
+    //         ]
+    //     };
+    //     scene.children.push(dino);
+    // }
 
     // TODO: Fill this in.  Add at least 20 dinos to the scene in a loop
 
